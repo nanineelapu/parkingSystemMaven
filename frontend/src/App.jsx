@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import './index.css';
 
-const API_BASE = 'http://localhost:8080';
+// If running via Vite dev server, point to localhost:8080. If deployed in Tomcat WAR, use relative path.
+const API_BASE = window.location.hostname === 'localhost' && window.location.port === '5173' 
+  ? 'http://localhost:8080' 
+  : '.';
 
 function App() {
   const [slots, setSlots] = useState({ totalSlots: 0, freeSlots: 0, occupiedSlots: 0 });
