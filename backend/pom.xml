@@ -11,6 +11,7 @@
 	<groupId>com.parking</groupId>
 	<artifactId>parking-system</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
 	<name>parking-system</name>
 	<description>Parking System Application</description>
 	<properties>
