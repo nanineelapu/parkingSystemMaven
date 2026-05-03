@@ -15,7 +15,8 @@ public class SlotService {
     private SlotRepository slotRepository;
 
     public Slot findFirstAvailableSlotSortedByFloorAndNumber(VehicleType type) {
-        List<Slot> availableSlots = slotRepository.findByIsAvailableAndSlotTypeOrderByFloorNumberAscSlotNumberAsc(true, type);
+        List<Slot> availableSlots = slotRepository.findByIsAvailableAndSlotTypeOrderByFloorNumberAscSlotNumberAsc(true,
+                type);
         if (availableSlots.isEmpty()) {
             throw new NoSlotAvailableException("No available slot for vehicle type: " + type);
         }

@@ -1,10 +1,8 @@
 package com.parking.model;
 
 import jakarta.persistence.*;
-import lombok.Data;
 
 @Entity
-@Data
 public class Slot {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,4 +15,15 @@ public class Slot {
     private VehicleType slotType;
     
     private Integer floorNumber;
+
+    public Long getSlotId() { return slotId; }
+    public void setSlotId(Long slotId) { this.slotId = slotId; }
+    public Integer getSlotNumber() { return slotNumber; }
+    public void setSlotNumber(Integer slotNumber) { this.slotNumber = slotNumber; }
+    public Boolean getIsAvailable() { return isAvailable; }
+    public void setIsAvailable(Boolean isAvailable) { this.isAvailable = isAvailable; }
+    public VehicleType getSlotType() { return slotType; }
+    public void setSlotType(VehicleType slotType) { this.slotType = slotType; }
+    public Integer getFloorNumber() { return floorNumber; }
+    public void setFloorNumber(Integer floorNumber) { this.floorNumber = floorNumber; }
 }
